@@ -1,23 +1,23 @@
-{{!-- todo: build signup handlebars --}}
-
-
-{{!-- Not sure if this is needed if the sign up option is on the login screen? --}}
-
-
-
+<div class="column">
+<h2 class="title pb-4">Create new account:</h2><hr>
 <form class="signup-form">
-    <div>
-        <label for="username-signup">username:</label>
-        <input type="text" id="username-signup" />
-    </div>
-    <div>
-        <label for="password-signup">password:</label>
-        <input type="password" id="password-signup" />
-    </div>
-    <div class="wrapper">
-        <button class="btn btn-success btn-lg" type="submit">Sign up and log in!</button>
-    </div>
+  <div>
+    <label for="username-signup">Username:</label>
+    <input type="text" id="username-signup" />
+  </div>
+  <div>
+    <label for="email-signup">Email:</label>
+    <input type="text" id="email-signup" />
+  </div>
+  <div>
+    <label for="password-signup">Password:</label>
+    <input type="password" id="password-signup" />
+  </div>
+  <div>
+    <button type="submit" class="button is-primary">Signup</button>
+  </div>
 </form>
-<!-- Only added to this handlebar as is where the logic is required for logging in -->
-<!-- Absolute path requiered in back end as js code is not to be sent to the client -->
-<script src="/javascript/sign-up.js"></script>
+</div>
+
+<!-- javascript file-->
+<script src="/javascript/signup.js"></script>

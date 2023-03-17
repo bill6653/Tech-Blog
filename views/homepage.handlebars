@@ -1,9 +1,8 @@
-{{!-- todo: build homepage handlebars --}}
+{{#each posts as |post|}}
 
-{{!-- todo: complete this page --}}
-
-<div class="container"> 
-    {{#each posts as |post|}}
-    {{> post-info post }}
-  {{/each}}
+{{> post-info post }}
 </div>
+
+{{else}}
+<h6 class="pb-4 has-text-centered is-italic">No posts to display</h6>
+{{/each}}

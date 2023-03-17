@@ -1,12 +1,15 @@
-// todo: build api index
-
 const router = require('express').Router();
-const userRoutes = require('./userRoutes');
-const commentRoutes = require('./commentRoutes');
-const postRoutes = require('./postRoutes');
 
-router.use('/users', userRoutes);
-router.use('/comments', commentRoutes);
-router.use('/posts', postRoutes);
+const apiRoutes = require('./api');
+const homeRoutes = require('./home-routes.js');
+const dashboardRoutes = require('./dashboard-routes.js');
+
+router.use('/api', apiRoutes);
+router.use('/', homeRoutes);
+router.use('/dashboard', dashboardRoutes);
+
+router.use((req, res) => {
+  res.status(404).end();
+});
 
 module.exports = router;
